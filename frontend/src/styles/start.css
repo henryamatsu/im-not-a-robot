@@ -1,0 +1,122 @@
+.start-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.start-menu {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 438px;
+    height: 115px;
+    background-color: rgb(250,250,250);
+    border: 3px solid rgb(210,210,210);
+    border-radius: 4px;
+}
+
+.captcha-prompt {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 438px;
+    height: 115px;
+    background-color: rgb(250,250,250);
+    box-shadow: 0 0 0 3px rgb(210,210,210);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+.checkbox-wrapper > p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content:center;
+    justify-items: center;
+    margin-right: 20px;
+}
+
+.image-wrapper > img {
+    width: 60px;
+    height: 60px;
+}
+
+.image-wrapper > p {
+    font-weight: 500;
+    color: rgb(135,135,135);
+}
+
+.checkbox {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    box-shadow: 0 0 0 3px rgb(200,200,200);
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 18px;
+    font-size: 16px;
+    color: rgba(255, 69, 0, 0);
+}
+
+.checkbox-flash {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 2px;
+    box-shadow:
+        0 0 0 var(--bg-1),
+        0 0 0 white,
+        0 0 0 var(--blue-1)
+    ;
+}
+
+.captcha-prompt.display-on {
+    transition: width .3s .5s, height .3s .5s;
+    min-width: 438px;
+    width: 50vw;
+    height: 90vh; 
+}
+
+.checkbox.display-on {
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgb(200,200,200);
+    transition: border-radius .5s, box-shadow .1s, color .3s .3s;
+}
+
+.checkbox-flash.display-on {
+    background-color: var(--bg-1);
+    box-shadow: 
+        0 0 500px 250px var(--bg-1),
+        0 0 1000px 750px var(--bg-1),
+        0 0 1000px 1000px var(--bg-1)
+    ;
+    transition: background-color .1s, box-shadow .6s;
+}
+
+/*
+make the actual menu appear in the inverse way that the captcha disappears
+
+When you click the checkbox, the height of the box should expand
+into a starting menu
+
+reSTORE Humanity
+
+we should do a march of robots svg animation along the bottom.
+*/
